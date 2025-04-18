@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Consumo de REST–API de Postres-pg
+</p>
+
+<div>
+  <label>Nombre </label>
+  <input type="text" id="nombre">
+</div>
+
+<div>
+  <label>Descripcion </label>
+  <input type="text" id="descripcion">
+</div>
+
+<div>
+  <label>Categoria </label>
+  <input type="text" id="categoria">
+</div>
+
+<div>
+<label>Precio </label>
+  <input type="number" id="precio">
+</div>
+
+<div>
+<label>Stock </label>
+  <input type="number" id="stock">
+</div>
+
+
+<button onclick="postPostre()"> POST postre </button>
+<button onclick="getPostre()"> GET postres </button> 
+
+<div id="resultado"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="callrestapi.js"></script>
+
+</body>
+</html>
+
