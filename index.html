@@ -1,44 +1,58 @@
 <!DOCTYPE html>
-<html>
-<body>
-<p>
-Consumo de REST–API de Postres-pg
-</p>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>API Postres</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
 
-<div>
-  <label>Nombre </label>
-  <input type="text" id="nombre">
+<div class="container py-5">
+  <h2 class="mb-4 text-center">Consumo de REST–API de Postres (PostgreSQL)</h2>
+
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <form id="form-postre">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <input type="text" id="descripcion" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label for="categoria" class="form-label">Categoría</label>
+            <input type="text" id="categoria" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label for="precio" class="form-label">Precio</label>
+            <input type="number" id="precio" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label for="stock" class="form-label">Stock</label>
+            <input type="number" id="stock" class="form-control">
+          </div>
+        </div>
+        <div class="mt-4 text-end">
+          <button type="button" onclick="postPostre()" class="btn btn-success me-2">POST Postre</button>
+          <button type="button" onclick="getPostre()" class="btn btn-primary">GET Postres</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="resultado"></div>
 </div>
 
-<div>
-  <label>Descripcion </label>
-  <input type="text" id="descripcion">
-</div>
-
-<div>
-  <label>Categoria </label>
-  <input type="text" id="categoria">
-</div>
-
-<div>
-<label>Precio </label>
-  <input type="number" id="precio">
-</div>
-
-<div>
-<label>Stock </label>
-  <input type="number" id="stock">
-</div>
-
-
-<button onclick="postPostre()"> POST postre </button>
-<button onclick="getPostre()"> GET postres </button> 
-
-<div id="resultado"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="callrestapi.js"></script>
 
+<script src="callrestapi.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
